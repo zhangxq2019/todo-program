@@ -1,0 +1,10 @@
+<!--components/delete/delete.wxml-->
+<view class="container" wx:if="{{visible}}">
+<view class="delete" >
+<text class="text" placeholder="{{placeholder}}" auto-focus="true" value="{{value}}" bindinput="watchValue">你确定要取消吗？</text>
+<view class="action">
+<view hover-class="active" class="sure" bindtap="sure">确定</view>
+<view hover-class="active" class="back" bindtap="back">取消</view>
+</view>
+</view>
+</view>

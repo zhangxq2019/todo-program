@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "c-clock": "../../components/clock/clock",
+    "c-button": "../../components/button/button",
+    "c-confirm": "../../components/confirm/confirm",
+    "c-delete": "../../components/delete/delete",
+    "c-change": "../../components/change/change"
+  }
+}

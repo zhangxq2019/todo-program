@@ -1,0 +1,65 @@
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+.change {
+  position: absolute;
+  width: 640rpx;
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 20rpx 0 20rpx;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%,-50%);
+  background: #fff;
+  border-radius: 16rpx;
+}
+.textarea {
+  width: 100%;
+  height: 40rpx;
+  padding: 10rpx 0rpx;
+  margin-bottom: 22rpx;
+  font-size: 28rpx;
+  background: #f2f2f2;
+  border-radius: 8rpx;
+}
+.show {
+  display: block;
+  margin-bottom: 28rpx;
+  color: #f00;
+  font-size: 22rpx;
+}
+.hide {
+  display: none;
+}
+.action {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.action .sure,
+.action .cancel {
+  width: 50%;
+  height: 66rpx;
+  text-align: center;
+}
+.action > .active {
+  opacity: 0.5;
+}
+.action .sure {
+  color: #00a60b;
+}
+.action::after{
+  content: "";
+  width: 4rpx;
+  height: 60%;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%,-50%);
+  background: #00a60b;
+}

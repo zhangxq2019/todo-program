@@ -1,0 +1,29 @@
+.watermelon-button {
+  width: 540rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 16rpx;
+  color: #fff;
+  font-size: 26rpx;
+}
+.watermelon-button.change {
+  background: linear-gradient(to right,#03bd568c,#00a60b);
+  box-shadow: 0 11rpx 32rpx 0 rgb(rgb(2, 97, 56));
+}
+.watermelon-button.default {
+  background: transparent;
+  border: 2rpx solid #00a60b;
+  color: #00a60b;
+}
+.watermelon-button.mini {
+  width: 360rpx;
+}
+.button::after{
+  border: none;
+}
+.active{
+  opacity: 0.8;
+}

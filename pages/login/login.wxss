@@ -1,0 +1,32 @@
+.login-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.login-container .avatar {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top:50%;
+}
+/* .login-container .getname {
+  margin-top: 30rpx;
+  padding: 10rpx;
+  border: 5rpx solid #00a60b;
+} */
+.login-container .button {
+  margin-top: 10%;
+}
+.login-container .button {
+  width: 300rpx;
+  height: 80rpx;
+  background: linear-gradient(to right,#03bd568c,#00a60b);
+  color: #fff;
+}
+.login-container .binding {
+  margin-top: 30px;
+  color: #00a60b;
+}

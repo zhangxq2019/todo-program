@@ -1,0 +1,10 @@
+<view class="container" wx:if="{{visible}}">
+<view class="change" >
+<textarea class="textarea" placeholder="{{placeholder}}" auto-focus="true" value="{{value}}" bindinput="watchValue"></textarea>
+<text class="alert {{change ? 'show':'hide'}}">您输入的数字不在范围内，请重新输入</text>
+<view class="action">
+<view hover-class="active" class="sure" bindtap="confirm">确定</view>
+<view hover-class="active" class="cancel" bindtap="cancel">取消</view>
+</view>
+</view>
+</view>

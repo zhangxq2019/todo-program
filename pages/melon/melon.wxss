@@ -1,0 +1,21 @@
+.melon-container {
+  height: 100vh;
+ position: relative;
+ box-sizing: border-box;
+}
+.clock {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+ .button {
+   position: absolute;
+   top: 65%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+.start {
+  margin: 20rpx 0;
+}

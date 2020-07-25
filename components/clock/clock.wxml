@@ -1,0 +1,4 @@
+<view class="clock" hover-class="active">
+<text class=".text">{{text}}</text>
+<image class="image" src="../../images/watermelon.png"></image>
+</view>

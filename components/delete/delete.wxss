@@ -1,0 +1,62 @@
+/* components/delete/delete.wxss */
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+.delete {
+  position: absolute;
+  width: 640rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 26rpx 20rpx 0 20rpx;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background: #fff;
+  border-radius: 16rpx;
+}
+.text {
+  width: 100%;
+  height: 120rpx;
+  line-height: 120rpx;
+  padding: 10rpx 10rpx;
+  margin-bottom: 22rpx;
+  font-size: 36rpx;
+  text-align: center;
+  background: #f2f2f2;
+  border-radius: 8rpx;
+  color: #f00;
+}
+.action {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.action .sure,
+.action .back {
+  width: 50%;
+  height: 66rpx;
+  text-align: center;
+}
+.action > .active {
+  opacity: 0.5;
+}
+.action .sure {
+  color: #f00;
+}
+.action::after{
+  content: "";
+  width: 4rpx;
+  height: 60%;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%,-50%);
+  background: #000;
+}

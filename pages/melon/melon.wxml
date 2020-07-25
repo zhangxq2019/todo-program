@@ -1,0 +1,25 @@
+<view class="melon-container">
+	<view class="clock">
+		<c-clock text="{{showTime}}" bindtap="showChange"></c-clock>
+	</view>
+	<view class="change">
+	<c-change visible="{{visibleChange}}" change="{{visibleAlert}}" placeholder="请输入分钟数(<=120分钟)" bindconfirm="completeChange" bindcancel="hideChange"></c-change>
+	</view>
+  <view class="button">
+	<view class="start" wx:if="{{!visibleAgain}}">
+  <!--  disabled="{{oneDisabled}}" -->
+		<c-button text="开始" type="change" bindtap="startTimer" wx:if="{{timerStatus === 'start'}}"></c-button>
+		<c-button text="暂停" type="change" bindtap="clearTimer" wx:elif="{{timerStatus === 'stop'}}"></c-button>
+		<c-button text="继续" type="change" bindtap="startTimer" wx:elif="{{timerStatus === 'continue'}}"></c-button>
+	</view>
+	<view class="cancel" wx:if="{{!visibleAgain}}">
+		<c-button text="取消" bindtap="cancelTimer"></c-button>
+	</view>
+	<view class="again" wx:else="{{visibleAgain}}">
+		<c-button text="再来一次" type="change" visible="{{visibleAgain}}" bindtap="againTimer"></c-button>
+	</view>
+  </view>
+
+	<c-delete visible="{{visibleDelete}}" binddelete="confirmDelete" bindback="hideDelete"></c-delete>
+  <c-confirm placeholder="你完成了什么" visible="{{visibleConfirm}}" bindconfirm="completeConfirm" bindcancel="hideConfirm" ></c-confirm>
+</view>
