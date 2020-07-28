@@ -1,2 +1,2 @@
 <!--components/button/button.wxml-->
-<button class="watermelon-button {{type === 'change' ? 'change' : 'default'}} {{size === 'mini' && 'mini'}}" hover-class="active">{{text}}</button>
+<button class="watermelon-button {{type === 'change' ? 'change' : 'default'}}" hover-class="active">{{text}}</button>

@@ -4,17 +4,14 @@ Component ({
       type: Boolean,
       value: true
     },
-    value: {
-      type: String,
-      value: ""
-    },
-    placeholder:{
+    text: {
       type: String,
       value: ''
     }
   },
   data: {
     value: "",
+    text: ""
   },
   methods: {
     sure(){

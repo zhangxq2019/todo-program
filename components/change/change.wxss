@@ -51,7 +51,7 @@
   opacity: 0.5;
 }
 .action .sure {
-  color: #00a60b;
+  color: #394170;
 }
 .action::after{
   content: "";
@@ -61,5 +61,5 @@
   left: 50%;
   top: 30%;
   transform: translate(-50%,-50%);
-  background: #00a60b;
+  background: #394170;
 }

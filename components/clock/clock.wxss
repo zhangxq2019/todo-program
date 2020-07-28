@@ -1,22 +1,21 @@
 .clock {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
+  width: 320rpx;
+  height: 320rpx;
+  border: 5px double #fff;
+  border-radius: 50%;
 }
 .clock .text {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-45%,-70%);
-  font-size: 30rpx;
+  transform: translate(-50%,-50%);
+  font-size: 50rpx;
   color: #fff;
   letter-spacing: 10rpx;
+  white-space: nowrap;
 }
-.clock .image {
-  width: 320rpx;
-  height: 320rpx;
-}
+
 .active {
   opacity: 0.8;
 }

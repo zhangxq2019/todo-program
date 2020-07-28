@@ -10,13 +10,13 @@
   font-size: 26rpx;
 }
 .watermelon-button.change {
-  background: linear-gradient(to right,#03bd568c,#00a60b);
-  box-shadow: 0 11rpx 32rpx 0 rgb(rgb(2, 97, 56));
+  background: linear-gradient(to right,#8f8fb7,#394170);
+  box-shadow: 0 11rpx 32rpx 0 rgb(#394170);
 }
 .watermelon-button.default {
   background: transparent;
-  border: 2rpx solid #00a60b;
-  color: #00a60b;
+  border: 2rpx solid #fff;
+  color: #fff;
 }
 .watermelon-button.mini {
   width: 360rpx;

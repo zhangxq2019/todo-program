@@ -1,4 +1,4 @@
-.container {
+.confirm-container {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -6,43 +6,40 @@
   top: 0;
   background: rgba(0, 0, 0, 0.2);
 }
-.confirm {
+.confirm-container .confirm {
   position: absolute;
-  width: 640rpx;
+  width: 620rpx;
   display: flex;
   flex-direction: column;
-  padding: 26rpx 20rpx 0 20rpx;
+  padding: 30rpx 30rpx 0 30rpx;
   left: 50%;
   top: 30%;
   transform: translate(-50%,-50%);
   background: #fff;
   border-radius: 16rpx;
 }
-.textarea {
+.confirm-container .textarea {
   width: 100%;
   height: 120rpx;
-  padding: 10rpx 10rpx;
   margin-bottom: 22rpx;
   font-size: 28rpx;
   background: #f2f2f2;
   border-radius: 8rpx;
 }
-.action {
+.confirm-container .action {
   width: 100%;
   display: flex;
   position: relative;
 }
-.action .sure,
-.action .cancel {
+.confirm-container .action .sure,
+.confirm-container .action .cancel {
   width: 50%;
   height: 66rpx;
   text-align: center;
+  color: #0084ff;
 }
-.action > .active {
+.confirm-container .action > .active {
   opacity: 0.5;
-}
-.action .sure {
-  color: #00a60b;
 }
 .action::after{
   content: "";
@@ -52,5 +49,5 @@
   left: 50%;
   top: 30%;
   transform: translate(-50%,-50%);
-  background: #00a60b;
+  background: #0084ff;
 }

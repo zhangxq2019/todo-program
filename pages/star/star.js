@@ -2,7 +2,7 @@ Page({
   data: {
     visible: false,
     time: 1500,
-    showTime: '西瓜计时',
+    showTime: '星空计时',
     timer: null,
     timerStatus: 'start',
     visibleDelete: false,
@@ -81,7 +81,6 @@ Page({
   // 取消计时
   cancelTimer() {
     this.setData({ visibleDelete: true })
-    console.log(this.data)
   },
 
   hideDelete() {
@@ -89,10 +88,10 @@ Page({
     this.setData({ visibleDelete: false })
   },
   confirmDelete() {
-    this.time = 0
-    this.setData({ time: this.time })
+    this.data.showTime = "00:00"
+    this.setData({showTime:this.data.showTime})
     this.hideDelete()
-    
+    this.setData({ visibleAgain: true })
   },
   // 完成框
   completeConfirm(event){

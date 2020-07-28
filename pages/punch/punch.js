@@ -3,7 +3,7 @@ Page({
     lists: [
       {
         id: 0,
-        text: '点击创建目标，可以添加新的todo',
+        text: '点击+创建目标，可以添加新的todo',
         finished: false,
         color: '',
         priority: '优先级',
@@ -17,14 +17,14 @@ Page({
       },
       {
         id: 2,
-        text: '暂时无法修改以创建的todo',
+        text: '暂时无法修改已创建的todo，只能删除重建',
         finished: false,
         color: '',
         priority: '优先级'
       },
       {
         id: 3,
-        text: '目标创建错误可以点击右边的X，删除后重新创建，点击圆点完成后也可以',
+        text: "点击'重要'给重要事件加边框，加以区分，再次点击可取消",
         finished: false,
         color: '',
         priority: '优先级'
@@ -33,7 +33,7 @@ Page({
     selectTab: '',
     visible: false,
     // visibleDelete: false,
-    show: false
+    color: true
   },
   // 点击创建目标出现confirm
   showConfirm() {
@@ -66,22 +66,7 @@ Page({
       _this.setData({ lists: lists })
     }, 800)
   },
-  // '删除'这个功能觉得多余了，暂时不要
-  // // 点击X出现delete
-  // showDelete(){
-  //   this.setData({visibleDelete: true})
-  // },
-  // // 点击取消隐藏delete
-  // hideDelete(){
-  //   this.setData({visibleDelete: false})
-  // },
-  // // 点击确定删除todo
-  // deleteTodo(event){
-  //   let index = event.currentTarget.dataset.index
-  //  this.data.lists.splice(index,1)
-  //  this.setData({lists: this.data.lists})
-  //  this.hideDelete()
-  // }
+
 
   // 点击优先级修改文本颜色
   clickPriority(event) {
@@ -90,13 +75,14 @@ Page({
     let index = event.currentTarget.dataset.index
     this.data.lists[index].color = getcolor
     this.data.lists[index].priority = getpriority
-    this.setData({ lists: this.data.lists })   
+    this.setData({ lists: this.data.lists })
+    this.setData({color: !this.data.color})
   },
-  // 点击显示下拉框
-  showtime(event) {
-    let index = event.currentTarget.dataset.index
-    console.log(this.data.lists[index].show)
-    this.data.lists[index].show = !this.data.lists[index].show
-    this.setData({lists: this.data.lists})
-  }
+//   // 点击显示下拉框
+//   showtime(event) {
+//     let index = event.currentTarget.dataset.index
+//     console.log(this.data.lists[index].show)
+//     this.data.lists[index].show = !this.data.lists[index].show
+//     this.setData({lists: this.data.lists})
+//   }
 })

@@ -1,10 +1,12 @@
 {
   "pages":[
-    "pages/punch/punch",
     "pages/login/login",
+    "pages/punch/punch",
+    "pages/star/star",
+    
+    
     "pages/myhome/myhome",
     
-    "pages/melon/melon",
     "pages/index/index", 
     "pages/logs/logs"
   ],
@@ -16,7 +18,7 @@
   },
   "tabBar": {
     "color": "#000",
-    "selectedColor": "#00a60b",
+    "selectedColor": "#4f5a87",
     "backgroundColor": "#fff",
     "borderStyle": "black",
     "list": [
@@ -27,16 +29,10 @@
         "selectedIconPath": "images/punch-active.png"
       },
       {
-        "pagePath": "pages/melon/melon",
-        "text": "专注",
+        "pagePath": "pages/star/star",
+        "text": "计时",
         "iconPath": "images/home.png",
         "selectedIconPath": "images/home-active.png"
-      },
-      {
-        "pagePath": "pages/myhome/myhome",
-        "text": "我的",
-        "iconPath": "images/me.png",
-        "selectedIconPath": "images/me-active.png"
       }
     ]
   },

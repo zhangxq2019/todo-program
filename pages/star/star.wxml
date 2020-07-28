@@ -1,4 +1,4 @@
-<view class="melon-container">
+<view class="melon-container" style="background:url(https://cdn.pixabay.com/photo/2015/07/15/11/49/mountain-846062_960_720.jpg)">
 	<view class="clock">
 		<c-clock text="{{showTime}}" bindtap="showChange"></c-clock>
 	</view>
@@ -20,6 +20,7 @@
 	</view>
   </view>
 
-	<c-delete visible="{{visibleDelete}}" binddelete="confirmDelete" bindback="hideDelete"></c-delete>
-  <c-confirm placeholder="你完成了什么" visible="{{visibleConfirm}}" bindconfirm="completeConfirm" bindcancel="hideConfirm" ></c-confirm>
+	<c-delete visible="{{visibleDelete}}" text="确定取消吗？" binddelete="confirmDelete" bindback="hideDelete"></c-delete>
+	<c-delete visible="{{visibleConfirm}}" text="恭喜你完成了！" binddelete="completeConfirm" bindback="hideConfirm"></c-delete>
+  <!-- <c-confirm placeholder="你完成了什么" visible="{{visibleConfirm}}" bindconfirm="completeConfirm" bindcancel="hideConfirm" ></c-confirm> -->
 </view>

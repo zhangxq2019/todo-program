@@ -3,8 +3,10 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background: #f6f6f6;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .watermelon-wrapper {
@@ -14,7 +16,7 @@
 }
 
 .todoList {
-  height: 900rpx;
+  height: 1000rpx;
   padding: 13rpx 30rpx;
   color: #000;
   font-size: 32rpx;
@@ -45,22 +47,18 @@
   margin-right: 38rpx;
   width: 38rpx;
   height: 38rpx;
-  border: 10rpx solid #00a60b;
+  border: 10rpx solid #8692d1;
   border-radius: 50%;
 }
 
 .todoList .item .select.active {
-  background: #00a60b;
+  background: #8692d1;
   transition: all 1s ease-out;
 }
 
 .todoList .item text {
   flex: 1;
-  overflow: hidden;
-  -webkit-line-clamp: 2;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
+  overflow: hidden; 
   color: #666;
 }
 
@@ -70,35 +68,26 @@
 }
 
 .todoList .item .priority {
-  position: relative;
-  width: 100rpx;
-  /* background: yellow; */
   margin: 20rpx;
-  font-size: 24rpx;
+  font-size: 28rpx;
   text-align: center;
-}
-
-.todoList .item .priority .display-show {
-  display: block;
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  font-size: 26rpx;
-  background: #f6f6f6;
-  z-index: 1;
-}
-
-.todoList .item .priority .display-hidden {
-  display: none;
-}
-
-.todoList .item .priority .display-show>text {
-  margin: 30rpx 0;
+  /* background: red; */
 }
 
 .createButton {
-  position: absolute;
-  bottom: 5%;
+  width: 100rpx;
+  height: 100rpx;
   left: 50%;
   transform: translateX(-50%);
+  background: #394170;
+  border-radius: 50%;
+  position: relative;
+}
+.createButton text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+  font-size: 80rpx;
 }

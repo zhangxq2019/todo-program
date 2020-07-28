@@ -4,19 +4,18 @@
 
 			<view class="select {{item.finished && 'active'}}" bindtap="selectedTodo" data-index="{{index}}"></view>
 			<text>{{item.text}}</text>
-			<!-- <view class="delete" bindtap="showDelete" data-index="{{index}}">X</view> -->
-			<view class="priority" bindtap="showtime" data-index="{{index}}">{{item.priority}}
-				<view class="{{item.show ?'display-show' : 'display-hidden'}}">
-					<text id="0" data-color="#FFCDD2" bindtap="clickPriority"  data-index="{{index}}" data-text="I" style="color:#f00;">I</text>
-					<text id="1" data-color="#C8E6C9" bindtap="clickPriority"  data-index="{{index}}" data-text="II" style="color:#9CCC65;">II</text>
-					<text id="2" data-color="#FFD600" bindtap="clickPriority"  data-index="{{index}}" data-text="III" style="color:#FDD835;">III</text>
-					<text id="3" data-color="#fff" bindtap="clickPriority"  data-index="{{index}}" data-text="IIII" style="color:#000;">IIII</text>
-				</view>
+			<view class="priority"  data-color="#8692d1" style="color:#8692d1;" bindtap="clickPriority"  data-index="{{index}}" wx:if="{{color}}">
+			重要
+			</view>
+			<view class="priority"  data-color="#fff" style="color:#8692d1;" bindtap="clickPriority"  data-index="{{index}}" wx:else>
+			重要
 			</view>
 
 		</view>
 	</scroll-view>
-	<c-button class="createButton" text="创建目标" size="mini" type="change" bindtap="showConfirm"></c-button>
+	<view class="createButton" bindtap="showConfirm">
+	<text>+</text>
+	</view>
 	<c-confirm visible="{{visible}}" placeholder="你想创建的事件" bindconfirm="createConfirm" bindcancel="hideConfirm"></c-confirm>
 	<!-- <c-delete visible="{{visibleDelete}}" binddelete="deleteTodo" bindback="hideDelete"></c-delete> -->
 </view>
