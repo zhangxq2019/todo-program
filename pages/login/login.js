@@ -24,11 +24,11 @@ Page({
     })
     .then(response => {
       this.saveMessage(response)
-      wx.reLaunch({ url: "/pages/myhome/myhome" })
+      wx.reLaunch({ url: "/pages/me/me" })
     })
   },
   saveMessage(response){
-    wx.setStorageSync('myhome', response.data.resource)
+    wx.setStorageSync('me', response.data.resource)
     wx.setStorageSync('X-token', response.header["X-token"])
   }
     })

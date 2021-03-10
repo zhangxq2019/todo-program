@@ -1,0 +1,22 @@
+<view class="cantainer">
+  <view class="header">
+    <view class="avatar">
+      <open-data type='userAvatarUrl'></open-data>
+    </view>
+    <view class="details">
+      <open-data type='userNickName' class="name"></open-data>
+
+    </view>
+  </view>
+  <view class="introduction">
+    <view class="title">这是一款打卡todo结合计时器的小程序</view>
+    <view class="punch">打卡页面：</view>
+    <view>点击+号创建备忘录</view>
+    <view>点击圆圈完成打卡</view>
+    <view class="timer"> 计时器页面：</view>
+    <view> 点击开始，开始倒计时，初设时间为25分钟</view>
+    <view>时间可以改变，点击时钟，出现输入框，输入你想要的时间</view>
+    <view> 点击暂停，停止倒计时，</view>
+    <view>点击继续，继续计时</view>
+  </view>
+</view>

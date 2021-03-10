@@ -1,39 +1,14 @@
+const {http} = require('../../lib/http.js');
 Page({
   data: {
-    lists: [
-      {
-        id: 0,
-        text: '点击+创建目标，可以添加新的todo',
-        finished: false,
-        color: '',
-        priority: '优先级',
-      },
-      {
-        id: 1,
-        text: '点击圆点，完成todo，1s后已完成的todo自动被删除',
-        finished: false,
-        color: '',
-        priority: '优先级'
-      },
-      {
-        id: 2,
-        text: '暂时无法修改已创建的todo，只能删除重建',
-        finished: false,
-        color: '',
-        priority: '优先级'
-      },
-      {
-        id: 3,
-        text: "点击'重要'给重要事件加边框，加以区分，再次点击可取消",
-        finished: false,
-        color: '',
-        priority: '优先级'
-      }
-    ],
-    selectTab: '',
+    lists: [],
     visible: false,
-    // visibleDelete: false,
     color: true
+  },
+  onShow(){
+    http.get('/todos?completed=false').then(response=>{
+      this.setData({ lists: response.data.resources })
+    })
   },
   // 点击创建目标出现confirm
   showConfirm() {
@@ -47,24 +22,29 @@ Page({
   createConfirm(event) {
     let content = event.detail
     if (content) {
-      let todo = [{ id: this.data.lists.length + 1, text: content, finished: false, priority: '优先级' }]
+      http.post('/todos',{
+        completed: false, description: content
+    })
+    .then(response => {
+      let todo = [response.data.resource]
       this.data.lists = todo.concat(this.data.lists)
       this.setData({ lists: this.data.lists })
       this.hideConfirm()
-    }
+  }) 
+ }
   },
   // 当todo被选择时，圆点变绿文字被划线代表已完成，0.8s后自动删除
-  selectedTodo(event) {
-    var _this = this
-    let lists = this.data.lists
+  destroyTodo(event){
     let index = event.currentTarget.dataset.index
-    console.log(lists[index])
-    lists[index].finished = true
-    this.setData({ lists: lists })
-    setTimeout(function () {
-      lists.splice(index, 1)
-      _this.setData({ lists: lists })
-    }, 800)
+    let id = event.currentTarget.dataset.id
+    http.put(`/todos/${id}`,{
+      completed: true
+    })
+    .then(response => {
+      let todo = response.data.resource
+      this.data.lists[index] = todo
+      this.setData({ lists: this.data.lists })
+    })
   },
 
 

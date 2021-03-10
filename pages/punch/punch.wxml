@@ -1,21 +1,17 @@
 <view class="punch-container">
 	<scroll-view class="todoList" wx:for-index="index" scroll-y="true">
-		<view class="item" wx:for="{{lists}}" wx:key="index" style="border:10rpx solid #fff; border-color:{{item.color}};">
+		<view class="item" wx:for="{{lists}}" wx:for-index="index" wx:key="{{item.id}}" wx:if="{{!item.completed}}">
 
-			<view class="select {{item.finished && 'active'}}" bindtap="selectedTodo" data-index="{{index}}"></view>
-			<text>{{item.text}}</text>
-			<view class="priority"  data-color="#8692d1" style="color:#8692d1;" bindtap="clickPriority"  data-index="{{index}}" wx:if="{{color}}">
-			重要
-			</view>
-			<view class="priority"  data-color="#fff" style="color:#8692d1;" bindtap="clickPriority"  data-index="{{index}}" wx:else>
-			重要
-			</view>
-
+			<view class="select {{item.completed && 'active'}}" bindtap='destroyTodo' data-index="{{index}}"
+				data-id="{{item.id}}"></view>
+			<text bindtap="changeText" data-index="{{index}}" data-id="{{item.id}}"
+				data-content="{{item.description}}">{{item.description}}</text>
 		</view>
 	</scroll-view>
 	<view class="createButton" bindtap="showConfirm">
-	<text>+</text>
+		<text>+</text>
 	</view>
-	<c-confirm visible="{{visible}}" placeholder="你想创建的事件" bindconfirm="createConfirm" bindcancel="hideConfirm"></c-confirm>
+	<c-confirm visible="{{visible}}" placeholder="你想创建的事件" bindconfirm="createConfirm" bindcancel="hideConfirm">
+	</c-confirm>
 	<!-- <c-delete visible="{{visibleDelete}}" binddelete="deleteTodo" bindback="hideDelete"></c-delete> -->
 </view>

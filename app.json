@@ -5,7 +5,7 @@
     "pages/star/star",
     
     
-    "pages/myhome/myhome",
+    "pages/me/me",
     
     "pages/index/index", 
     "pages/logs/logs"
@@ -35,7 +35,7 @@
         "selectedIconPath": "images/home-active.png"
       },
       {
-        "pagePath": "pages/myhome/myhome",
+        "pagePath": "pages/me/me",
         "text": "我的页面",
         "iconPath": "images/me.png",
         "selectedIconPath": "images/me-active.png"

@@ -1,0 +1,53 @@
+.cantainer { 
+  background: url(https://cdn.pixabay.com/photo/2015/07/15/11/49/mountain-846062_960_720.jpg);
+  color: #fff;
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+ }
+.header { 
+  height: 170rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  color: #4f5a87;
+  font-size: 22rpx;
+  padding: 0 45rpx;
+  margin-bottom: 23rpx;
+ }
+.header .avatar {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20rpx;
+}
+.header .details { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+ }
+
+.header .details .name {
+  color: black;
+  font-size: 32rpx;
+  padding-bottom: 22rpx;
+}
+.introduction {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+.introduction .title {
+  font-size: 16px;
+  align-self: center;
+}
+view {
+  margin: 5px;
+}
+view.punch,
+view.timer {
+  margin-top: 20px;
+}
