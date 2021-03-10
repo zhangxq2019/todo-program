@@ -1,6 +1,14 @@
-<view class="login-container">
+<view class="login">
 <view class="avatar">
 <open-data type="userAvatarUrl"></open-data>
 </view>
-<c-button class="button" type="change" open-type="getUserInfo" text="登录" bindtap="login"></c-button>
+<view class="name-wrap">
+  <open-data type="userNickName" class="name"></open-data>
+</view>
+<button class="loginButton"
+        open-type="getUserInfo" 
+        bindgetuserinfo="login"
+        withCredentials="true">
+        登录
+  </button>
 </view> 

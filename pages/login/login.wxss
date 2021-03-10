@@ -1,17 +1,38 @@
-.login-container {
+.login {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
-.login-container .avatar {
+.login .avatar {
   width: 200rpx;
   height: 200rpx;
   border-radius: 50%;
   overflow: hidden;
   margin-top:50%;
 }
-.login-container .button {
-  margin-top: 10%;
+.login .name-wrap{
+  color: #4f5a87;
+  margin: 5% 0;
 }
+button::after{ border: none; }
+.button-hover { opacity: 0.6; }
+.loginButton {
+  width: 360rpx;
+  height: 80rpx;
+  border-radius: 16rpx;
+  color: #fff;
+  font-size: 26rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background: linear-gradient(to right,#4f5a87, #394170);
+}
+
+/* .login .binding{
+  color: #F6705A;
+  font-size: 24rpx;
+  margin-top: 46rpx;
+} */

@@ -13,7 +13,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "西瓜打卡",
+    "navigationBarTitleText": "星空打卡",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
@@ -33,6 +33,12 @@
         "text": "计时",
         "iconPath": "images/home.png",
         "selectedIconPath": "images/home-active.png"
+      },
+      {
+        "pagePath": "pages/myhome/myhome",
+        "text": "我的页面",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me-active.png"
       }
     ]
   },

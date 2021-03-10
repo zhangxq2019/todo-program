@@ -11,7 +11,7 @@
   font-size: 22rpx;
   padding: 10rpx 40rpx;
   margin-bottom: 20rpx;
-  color:  #00a60b;
+  color:  #4f5a87;
   background: #fff;
 }
 
@@ -52,7 +52,7 @@
 }
 .myhome-container .active {
   display: inline-block;
-  border-bottom: 10rpx solid #00a60b;
+  border-bottom: 10rpx solid #4f5a87;
 }
 .myhome-container .list {
   flex: 1;
@@ -75,7 +75,7 @@
   margin-bottom: 24rpx;
   font-size: 36rpx;
   font-weight: bold;
-  color: #00a60b;
+  color: #4f5a87;
 }
 .myhome-container .list .item .content {
   display: flex;
